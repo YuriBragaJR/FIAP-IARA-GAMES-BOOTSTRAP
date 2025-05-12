@@ -11,6 +11,7 @@
     --color-007:#D9B504;
     --color-008:#ffb822;
     --color-009:#F2F2F2;
+    --color-010:#d3d3d3;
     --transition: .5s;
 }
 
@@ -28,7 +29,7 @@ textarea {
 }
 
 body {
-    background-image: url(../images/149441939_01784fb2-e758-4ed7-ad0b-1bd195549471.jpg);
+    background-color:var(--color-007);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,6 +72,21 @@ body {
     box-shadow: 0 0 15px 2px #27287a;
     transition: 0.3s;
 }
+
+.card-jogo {
+    background-color: var(--color-001);
+    color: var(--color-003);
+}
+
+.btn-card-jogo {
+    background-color: var(--color-006);
+    color: var(--color-003);
+}
+.btn-card-jogo:hover {
+    background-color: var(--color-005);
+    color: var(--color-003);
+}
+
 
 .icon-box {
     font-size: 6vmin;   
