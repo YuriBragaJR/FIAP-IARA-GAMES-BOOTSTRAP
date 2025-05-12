@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Variaveis*/
+:root {
+
+    --color-001: #1d1d1d;
+    --color-002: #2c2c2c;
+    --color-003: #e4e4e4;
+    --color-005:#00388b;
+    --color-006:#0050C7;
+    --color-007:#D9B504;
+    --color-008:#ffb822;
+    --color-009:#F2F2F2;
+    --transition: .5s;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+}
+
+body {
+    background-image: url(../images/149441939_01784fb2-e758-4ed7-ad0b-1bd195549471.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.navbar {
+    background-color: var(--color-002);
+}
+
+.linha-vertical {
+    border: 1px solid var(--color-003);
+    align-self: center;
+    height: 20px;
+}
+
+.caixa-opcao {
+    background-color: var(--color-007);
+}
+
+.submenu {
+    color: var(--color-003);
+}
+
+.hero-bg {
+    background-color: var(--color-001);
+}
+
+.card-box {
+    transform: translateY(-90px);
+
+}
+
+.card {
+    background-color: var(--color-005);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px 2px #27287a;
+    transition: 0.3s;
+}
+
+.icon-box {
+    font-size: 6vmin;   
+}
+
+.icon-sociais {
+    display: flex;
+    margin: 10px 0px 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: 0.5s;
+}
+
+.linha-subtextos {
+    border: 2px dashed var(--color-005);
+    justify-self: center;
+    width: 65vmin;
+}
+
+.seta-carrosel {
+    color: #00388b;
+}
+
+footer {
+    background-color: var(--color-001);
+    color: var(--color-009);
+}
+
+#rede-social {
+    font-size: 5vmin;
+    transition: 0.5s;
+    color: var(--color-003);
+}
+
+#rede-social:hover {
+    color: var(--color-008);
+    text-shadow: 0px 0px 2px var(--color-008) ;
+    transition: var(--transition);
+}
+
+.section-sobre-nos {
+    background-color: var(--color-005);
+}
