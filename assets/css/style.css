@@ -87,7 +87,6 @@ body {
     color: var(--color-003);
 }
 
-
 .icon-box {
     font-size: 6vmin;   
 }
@@ -110,6 +109,8 @@ body {
 .seta-carrosel {
     color: #00388b;
 }
+
+
 
 footer {
     background-color: var(--color-001);
