@@ -33,9 +33,10 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
+
+/* header */
 .navbar {
     background-color: var(--color-002);
 }
@@ -54,6 +55,8 @@ body {
     color: var(--color-003);
 }
 
+
+/* corpo do site */
 .hero-bg {
     background-color: var(--color-001);
 }
@@ -73,6 +76,7 @@ body {
     transition: 0.3s;
 }
 
+/* cards de jogos */
 .card-jogo {
     background-color: var(--color-001);
     color: var(--color-003);
@@ -91,15 +95,6 @@ body {
     font-size: 6vmin;   
 }
 
-.icon-sociais {
-    display: flex;
-    margin: 10px 0px 5px;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    transition: 0.5s;
-}
-
 .linha-subtextos {
     border: 2px dashed var(--color-005);
     justify-self: center;
@@ -111,6 +106,15 @@ body {
 }
 
 
+/* footer */
+.icon-sociais {
+    display: flex;
+    margin: 10px 0px 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: 0.5s;
+}
 
 footer {
     background-color: var(--color-001);
