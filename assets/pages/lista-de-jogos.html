@@ -12,8 +12,8 @@
 </head>
 <body>
 
-      <!-- Modal de Login -->
-    <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-4 bg-dark">
                 <div class="modal-header">
@@ -24,18 +24,18 @@
                     <form>
                         <div class="mb-3">
                             <label for="email" class="form-label text-white">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required aria-label="Campo para digitar o email">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label text-white">Senha</label>
-                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required aria-label="Campo para digitar a senha">
                         </div>
-                        <button type="submit" class="btn btn-warning w-100 fw-semibold">Entrar</button>
+                        <button type="submit" class="btn btn-warning w-100 fw-semibold" aria-label="Botão para entrar na conta">Entrar</button>
                     </form>
                     <div class="text-center mt-3">
-                        <a href="#">Esqueceu a senha?</a>
+                        <a href="#" aria-label="Link para recuperação de senha">Esqueceu a senha?</a>
                         <br>
-                        <a href="#" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#cadastroModal">Não possui cadastro?</a>
+                        <a href="#" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#cadastroModal" aria-label="Link para cadastro">Não possui cadastro?</a>
                     </div>
                 </div>
             </div>
@@ -44,113 +44,110 @@
 
     <!-- Modal de Cadastro -->
     <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content p-4 bg-dark">
-                <div class="modal-header">
-                    <h5 class="modal-title text-warning" id="cadastroModalLabel">Cadastro</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="nome" class="form-label text-white">Nome Completo</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label text-white">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="senha" class="form-label text-white">Senha</label>
-                            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="confirmaSenha" class="form-label text-white">Confirme a Senha</label>
-                            <input type="password" class="form-control" id="confirmaSenha" placeholder="Digite sua senha novamente" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="dataNascimento" class="form-label text-white">Data de Nascimento</label>
-                            <input type="date" class="form-control" id="dataNascimento" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="telefone" class="form-label text-white">Telefone</label>
-                            <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
-                        </div>
-                        <button type="submit" class="btn btn-warning w-100 fw-semibold">Cadastrar</button>
-                    </form>
-                </div>
+    <div class="modal-dialog">
+        <div class="modal-content p-4 bg-dark">
+            <div class="modal-header">
+                <h5 class="modal-title text-warning" id="cadastroModalLabel">Cadastro</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label text-white">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required aria-label="Campo para digitar o nome completo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-white">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" required aria-label="Campo para digitar o email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label text-white">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required aria-label="Campo para digitar a senha">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmaSenha" class="form-label text-white">Confirme a Senha</label>
+                        <input type="password" class="form-control" id="confirmaSenha" placeholder="Digite sua senha novamente" required aria-label="Campo para confirmar a senha">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dataNascimento" class="form-label text-white">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="dataNascimento" required aria-label="Campo para selecionar a data de nascimento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label text-white">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required aria-label="Campo para digitar o telefone">
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100 fw-semibold" aria-label="Botão para cadastrar">Cadastrar</button>
+                </form>
             </div>
         </div>
     </div>
-
+</div>
 
     <!-- Modal de Contato -->
-    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content bg-dark text-white p-4">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title text-warning" id="contatoModalLabel">Contato</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensagem" class="form-label">Mensagem</label>
-                            <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-warning w-100 fw-semibold">Enviar</button>
-                    </form>
-                </div>
+<div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white p-4">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-warning" id="contatoModalLabel">Contato</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required aria-label="Campo para digitar o nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" required aria-label="Campo para digitar o email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem" required aria-label="Campo para digitar a mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100 fw-semibold" aria-label="Botão para enviar a mensagem">Enviar</button>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
 <!-- barra nav -->
 <nav class="px-3 navbar navbar-expand-lg border-body" data-bs-theme="dark">
-  <div class="container-fluid">
+<div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="../../assets/images/logo-iara-games-branco.png" alt="" width="200" height="auto">
+    <img src="../../assets/images/logo-iara-games-branco.png" alt="Logo da Iara Games" width="200" height="auto" aria-label="Logotipo da empresa">
     </a>
-    <button class="navbar-toggler border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-warning" aria-current="page" href="../../index.html">Home</a>
+        <a class="nav-link text-warning" aria-current="page" href="../../index.html" aria-label="Página inicial">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-warning"  aria-current="page" href="../../index.html#scroll">Sobre nós</a>
+        <a class="nav-link text-warning" aria-current="page" href="../../index.html#scroll" aria-label="Seção sobre nós">Sobre nós</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-warning" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
+        <a class="nav-link text-warning" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal" aria-label="Abrir modal de contato">Contato</a>
         </li>
         <li class="nav-item d-none d-lg-block d-sm-none">
-          <a class="nav-link text-warning" aria-current="page"> | </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-warning" href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-        </li>
+        <a class="nav-link text-warning" aria-current="page"> | </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-warning" href="#" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastre-se</a>
+        <a class="nav-link text-warning" href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" aria-label="Abrir modal de login">Login</a>
         </li>
-      </ul>
+        <li class="nav-item">
+        <a class="nav-link text-warning" href="#" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#cadastroModal" aria-label="Abrir modal de cadastro">Cadastre-se</a>
+        </li>
+    </ul>
     </div>
-  </div>
+</div>
 </nav>
 <!-- fim barra nav -->
 
-
+<!-- lista de jogos -->
 <section class="container mt-4">
         <div class="row gap-4 justify-content-center cards-lista-jg">
 
@@ -221,7 +218,7 @@
 
         </div>
 </section>
-
+<!-- fim lista de jogos -->
 
 <!-- footer -->
 <br><br><br>
