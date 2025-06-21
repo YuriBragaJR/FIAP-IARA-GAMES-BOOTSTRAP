@@ -22,6 +22,10 @@ a {
     color: inherit;
 }
 
+p {
+    color: #000000;
+}
+
 /* Garantindo que botões e inputs tenham um estilo mais uniforme */
 button, input, textarea {
     border: none;
@@ -42,6 +46,12 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+hr {
+    border: 1px solid;
+    color: var(--color-10);
+    opacity: 100%;
 }
 
 /*Variaveis*/

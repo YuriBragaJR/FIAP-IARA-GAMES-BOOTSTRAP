@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="bg-black">
+<body>
 
     <!-- Modal de Login -->
     <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -146,7 +146,7 @@
         
 
 
-    <main class="hero-bg vh-100">
+    <main class="hero-bg vh-100" id="topo">
 
         <!-- Header -->
         <header class="navbar navbar-expand-md navbar-dark px-3 bg-transparente">
@@ -288,12 +288,12 @@
         </div>
 
     </main>
-        <!-- fim do Hero -->
+    <!-- fim do Hero -->
 
 
     <!-- Slide de JOGOS -->
     <section class="container spacing">
-            <h2 class="container fw-bold mb-4 cor-rosa letter-spacing  ">Jogos feitos para você!</h2><hr>
+            <h2 class="container fw-bold mb-4 cor-rosa letter-spacing">Jogos feitos para você!</h2><hr>
             <p class="container fs-5 mb-5">Seja você um gamer casual ou um fã hardcore, sempre há novos títulos incríveis esperando para serem explorados.</p>
         <div id="slide-jogos" class="carousel slide">
             <div class="carousel-indicators">
@@ -482,8 +482,7 @@
 </article>
 
 
-<!-- sobre nos -->
-
+        <!-- sobre nos -->
         <section class="container bg-black text-black p-3 my-5 p-5 rounded shadow" id="scroll">
             <h4 class="text-center text-white letter-spacing fw-bold mb-5 container">Sobre a Iara Games</h4>
         
@@ -492,29 +491,37 @@
             <p class="sobre-nos-p text-center fw-semibold cor-verde ">A Iara Games é um projeto meticuloso e visionário, idealizado para destacar o talento e a criatividade dos desenvolvedores de games brasileiros. Cada detalhe foi cuidadosamente pensado para criar uma plataforma única e personalizada, que reflete a paixão e a determinação de Iara Silva em transformar sua visão em realidade. O nome <strong>IARA GAMES</strong>, além de uma escolha significativa, simboliza a essência do projeto. Inspirado na figura mítica do folclore brasileiro, o nome carrega o compromisso de celebrar a riqueza cultural do Brasil enquanto promove os talentos locais. Descubra um espaço dedicado à inovação, criatividade e à valorização dos desenvolvedores que estão moldando o futuro do mercado de games no Brasil. Seja parte dessa jornada extraordinária!</p>
         </section>
 
-    <!-- footer -->
-    <br><br><br>
+        <section>
+            <a href="#topo">Voltar ao topo</a>
+        </section>
+
+        <!-- footer -->
         <footer class="text-center p-2 cor-verde">
-            <p>Siga-nos nas redes sociais</p>
-            <div class="icon-sociais" aria-label="Links para redes sociais">
-                <a target="_blank" href="https://x.com/" aria-label="Página oficial do Twitter da Iara Games">
-                    <i class="fa-brands fa-square-x-twitter " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://instagram.com/" aria-label="Página oficial do Instagram da Iara Games">
-                    <i class="fa-brands fa-square-instagram " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://youtube.com/" aria-label="Página oficial do YouTube da Iara Games">
-                    <i class="fa-brands fa-square-youtube " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://facebook.com/" aria-label="Página oficial do YouTube da Iara Games">
-                    <i class="fa-brands fa-square-facebook " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://linkedin.com/" aria-label="Página oficial do YouTube da Iara Games">
-                    <i class="fa-brands fa-linkedin " id="rede-social"></i></a>
+            <div class=" d-md-flex justify-content-center align-items-center gap-5 py-4">
+                <div>
+                    <img class="logo-iaragames-footer" src="./assets/images/Logo04.png" alt="Logo da Iara Games no rodapé" width="150" height="auto">
+                </div>
+                <div class="pt-3">
+                    <p class="cor-verde">Siga-nos nas redes sociais</p>
+                    <div class="icon-sociais" aria-label="Links para redes sociais">
+                        <a class="hover-verde" target="_blank" href="https://x.com/" aria-label="Página oficial do Twitter da Iara Games">
+                            <i class="fa-brands fa-square-x-twitter " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://instagram.com/" aria-label="Página oficial do Instagram da Iara Games">
+                            <i class="fa-brands fa-square-instagram " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://youtube.com/" aria-label="Página oficial do YouTube da Iara Games">
+                            <i class="fa-brands fa-square-youtube " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://facebook.com/" aria-label="Página oficial do YouTube da Iara Games">
+                            <i class="fa-brands fa-square-facebook " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://linkedin.com/" aria-label="Página oficial do YouTube da Iara Games">
+                            <i class="fa-brands fa-linkedin " id="rede-social"></i></a>
+                    </div>
+                </div>
             </div>
-        
-            <img class="logo-iaragames-footer my-3" src="./assets/images/Logo04.png" alt="Logo da Iara Games no rodapé" width="200" height="autp">
-            <p>&copy; 2025 Iara Games. Todos os direitos reservados.</p>
+            <p class=" cor-verde">&copy; 2025 Iara Games. Todos os direitos reservados.</p>
         </footer>
 
 
