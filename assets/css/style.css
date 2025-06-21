@@ -1,23 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/*Variaveis*/
-:root {
-
-    --color-001: #1d1d1d;
-    --color-002: #2c2c2c;
-    --color-003: #e4e4e4;
-    --color-005:#00388b;
-    --color-006:#0050C7;
-    --color-007:#D9B504;
-    --color-008:#ffb822;
-    --color-009:#F2F2F2;
-    --color-010:#d3d3d3;
-    --transition: .5s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-*{
+html, body {
+    width: 100%;
+    height: 100%;
     font-family: "Poppins", sans-serif;
-    
+}
+
+/* Removendo estilos padrão de listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Resetando estilos padrão de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Garantindo que botões e inputs tenham um estilo mais uniforme */
+button, input, textarea {
+    border: none;
+    outline: none;
+    background: none;
+    font: inherit;
 }
 
 a {
@@ -29,82 +39,244 @@ textarea {
 }
 
 body {
-    background-color:var(--color-007);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
-/* header */
-.navbar {
-    background-color: var(--color-002);
+/*Variaveis*/
+:root {
+    --color-01: #000000;
+    --color-02: #ffffff;
+    --color-03: #535353;
+    --color-04: #9dff00;
+    --color-05: #568b00;
+    --color-06: #ff006e;
+    --color-07: #8b003c;
+    --color-08: #006eff;
+    --color-09: #003985;
+    --color-10: #020020ab;
+    --transition: .5s;
 }
 
-.linha-vertical {
-    border: 1px solid var(--color-003);
-    align-self: center;
+/* btn - pré-codificado com paleta de seleção propria */
+.btn-verde {
+    background-color: var(--color-04);
+    transition: var(--transition);
+}
+.btn-verde:hover {
+    background-color:var(--color-05);
+    transition: var(--transition);
+}
+.btn-rosa {
+    background-color: var(--color-06);
+    transition: var(--transition);
+}
+.btn-rosa:hover {
+    background-color: var(--color-07);
+    transition: var(--transition);
+}
+.btn-azul {
+    background-color: var(--color-08);
+    transition: var(--transition);
+}
+.btn-azul:hover {
+    background-color: var(--color-09);
+    transition: var(--transition);
+}
+
+/* link - pré-codificado com paleta de seleção propria */
+.link-branco {
+    color: var(--color-02);
+}
+.link-verde {
+    color: var(--color-04);
+}
+.link-rosa {
+    color: var(--color-06);
+}
+.link-azul {
+    color: var(--color-08);
+}
+
+/* Hover dos links */
+.hover-cinza:hover {
+    color:var(--color-03);
+}
+.hover-verde:hover {
+    color:var(--color-05);
+}
+.hover-rosa:hover {
+    color: var(--color-07);
+}
+.hover-azul:hover {
+    color: var(--color-09);
+}
+
+
+/* cor - pré-codificado com paleta de seleção propria */
+.cor-verde {
+    color: var(--color-04);
+}
+.cor-rosa {
+    color: var(--color-06);
+}
+.cor-azul {
+    color: var(--color-08);
+}
+
+/* bg - pré-codificado com paleta de seleção propria */
+.bg-verde {
+    background-color: var(--color-04);
+}
+.bg-rosa {
+    background-color: var(--color-06);
+}
+.bg-azul {
+    background-color: var(--color-08);
+}
+.bg-preto {
+    background-color: var(--color-01);
+}
+.bg-branco {
+    background-color: var(--color-02);
+}
+.bg-transparente {
+    background-color: var(--color-10);
+}
+/* ---- */
+
+.sombra {
+    text-shadow: 0 0 20px #000000;
+}
+.sombra-clara {
+    text-shadow: 0 0 20px #ffffff;
+}
+
+.letter-spacing {
+    letter-spacing: 3px;
+}
+
+.spacing {
+    margin: 220px auto;
+}
+
+
+.header {
+    margin: 0 25px;
+}
+
+.barra-search {
+    transform: translatex(50px);
+
+}
+
+/* fonte textos do hero */
+.luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    
+}
+
+/* Menu Hamburger */
+.hamburger {
+    width: 30px;
     height: 20px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.caixa-opcao {
-    background-color: var(--color-007);
+.hamburger span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    left: 0;
+    transition: 0.3s;
 }
 
-.submenu {
-    color: var(--color-003);
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { top: 16px; }
+
+.btn-hamburger {
+    background-color: transparent;
+    border: none;
+}
+
+    .cart-container {
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    .cart-link {
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -12px;
+      background-color: var(--color-07);
+      color: white;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+
+
+/* bara de pesquisa */
+.search-form {
+    width: 100%;
+    max-width: 250px;
+}
+.search-wrapper {
+    position: relative;
+}
+.search-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fffefec5;
+}      
+.search-wrapper input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ffffff52;
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--color-02);
+    background-color: #0000003b;
 }
 
 
 /* corpo do site */
 .hero-bg {
     background-color: var(--color-001);
+    background: linear-gradient(rgba(3, 27, 54, 0.9), rgba(255, 7, 110, 0.336)), url('../images/iara-bg.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
 }
-
-.card-box {
-    transform: translateY(-90px);
-
-}
-
-.card {
-    background-color: var(--color-005);
-    transition: 0.3s;
-}
-
-.card:hover {
-    box-shadow: 0 0 15px 2px #27287a;
-    transition: 0.3s;
-}
-
-/* cards de jogos */
-.card-jogo {
+/* corpo da pagina lista de jogos */
+.lista-bg {
     background-color: var(--color-001);
-    color: var(--color-003);
+    background: linear-gradient(rgba(3, 27, 54, 0.9), rgba(255, 255, 255, 0.562)), url('../images/bg-herov4.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 75vh ;
 }
-
-.btn-card-jogo {
-    background-color: var(--color-006);
-    color: var(--color-003);
-}
-.btn-card-jogo:hover {
-    background-color: var(--color-005);
-    color: var(--color-003);
-}
-
-.icon-box {
-    font-size: 6vmin;   
-}
-
-.linha-subtextos {
-    border: 2px dashed var(--color-005);
-    justify-self: center;
-    width: 65vmin;
-}
-
-.seta-carrosel {
-    color: #00388b;
-}
-
 
 /* footer */
 .icon-sociais {
@@ -116,10 +288,7 @@ body {
     transition: 0.5s;
 }
 
-footer {
-    background-color: var(--color-001);
-    color: var(--color-009);
-}
+
 
 #rede-social {
     font-size: 5vmin;
@@ -133,6 +302,67 @@ footer {
     transition: var(--transition);
 }
 
-.section-sobre-nos {
-    background-color: var(--color-005);
+/* menu lateral */
+.fundo-quem-somos {
+    background-image: url(../images/bg-quemsomos.jpg);
+        background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.hero-text {
+    margin-top: 80px;
+    height: 60%;
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    justify-content: end;
+}
+
+.disconto {
+    background-color: var(--color-08);
+    border-radius: 5px;
+
+
+}
+
+.valor-antigo {
+    text-decoration:line-through;
+}
+
+
+.campo-jogo  {
+    height: 100px;
+    overflow: hidden;
+}
+
+.sombra-texto {
+    text-shadow: 0 0 2px hsl(0, 0%, 100%);
+    padding: 0 20px;
+    font-weight: 600;
+    color: #181818;
+    font-size: 1.3rem;
+    background-color: #ffffff6b;
+    border-radius: 30px;
+}
+
+.iara-games {
+    color: var(--color-02);
+}
+
+footer {
+    background-color: var(--color-01);
+}
+
+
+@media (min-width: 768px) {
+    .titulo-hero {
+        width: 55%;
+    }
+    .texto-hero {
+        width: 50%;
+    }
+    .card-jogo {
+        width: 260px;
+    }
 }
