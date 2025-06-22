@@ -19,6 +19,12 @@
 
 <body>
 
+
+
+
+
+
+
     <!-- Modal de Login -->
     <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -28,7 +34,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form onsubmit="return realizarLogin()">
                         <div class="mb-3">
                             <label for="email" class="form-label text-white">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
@@ -58,7 +64,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <form onsubmit="return validarSenha()">
+                    <form onsubmit="return testarCadastro()">
                         <div class="mb-3">
                             <label for="nome" class="form-label text-white">Nome Completo</label>
                             <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
@@ -121,7 +127,6 @@
     </div>
 
     <!-- Modal sobre nos -->
-
     <div class="modal fade" id="sobrenosModal" tabindex="-1" aria-labelledby="sobrenosModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-light text-white p-4 fundo-quem-somos">
@@ -154,10 +159,12 @@
 
 
 
-            <!-- Menu normal (visível em md ou maior) -->
-            <div class="d-xl-flex ms-auto">
+            <!-- Meun de Visitante -->
+            <div id="menuVisitante" class="ms-auto" >
+                <!-- Menu normal (visível em md ou maior) -->
+            <div class="d-xl-flex">
 
-                        <!-- Botão hamburger (apenas em telas pequenas) -->
+            <!-- Botão hamburger (apenas em telas pequenas) -->
             <button class="btn-hamburger d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-label="Abrir menu">
                 <div class="hamburger">
                     <span></span>
@@ -166,58 +173,126 @@
                 </div>
             </button>
 
-                <div class="collapse navbar-collapse d-none d-md-flex">
-                <ul class="navbar-nav sombra">
-                    <li class="nav-item">
-                        <a class="nav-link fw-medium " aria-current="page" href="./assets/pages/lista-de-jogos.html">Jogos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-medium "  aria-current="page" href="#scroll">Quem Somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-medium " aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
-                    </li>
-                    <li class="nav-item d-none d-md-block d-sm-none">
-                        <a class="nav-link text-white fw-medium" aria-current="page"> | </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link fw-medium link-verde" href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-                    </li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-medium link-verde" href="#" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastre-se</a>
-                    </li>
-                </ul>
+                    <div class="collapse navbar-collapse d-none d-md-flex " >
+                        <div class="d-xl-flex ms-auto">
+                            <div>
+                                <ul class="navbar-nav sombra">
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-medium " aria-current="page" href="./assets/pages/lista-de-jogos.html">Jogos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-medium "  aria-current="page" href="#scroll">Quem Somos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-medium " aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
+                                    </li>
+                                    <li class="nav-item d-none d-md-block d-sm-none">
+                                        <a class="nav-link text-white fw-medium" aria-current="page"> | </a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-medium link-verde" href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                                    </li>
+                                    <li class="nav-item me-5">
+                                        <a class="nav-link fw-medium link-verde" href="#" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastre-se</a>
+                                    </li>
+                                </ul>             
+                            </div>
+                            <div class="collapse navbar-collapse d-none d-md-flex  barra-search header mx-auto">   
+                                <form class="nav-link border rounded bg-transparente" >
+                                    <div>
+                                        <i class="fas fa-search text-white mx-2"></i>
+                                        <input class="text-white p-2" type="text" placeholder="Buscar...">
+                                    </div>
+                                </form>
+                            </div>  
+
+                        </div>
+
+                    </div>
+                </div>
+            
+            </div>
+
+            <!-- Meun de Usuario Logado -->
+            <div id="menuUsuario" style="display: none;" class="ms-auto">
+                <!-- Menu normal (visível em md ou maior) -->
+            <div class="d-xl-flex">
+
+            <!-- Botão hamburger (apenas em telas pequenas) -->
+            <button class="btn-hamburger d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-label="Abrir menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+                    <div class="collapse navbar-collapse d-none d-md-flex " >
+                        <div class="d-xl-flex ms-auto">
+                            <div>
+                                <ul class="navbar-nav sombra">
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-medium " aria-current="page" href="./assets/pages/lista-de-jogos.html">Jogos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-medium "  aria-current="page" href="#scroll">Quem Somos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-medium " aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
+                                    </li>
+                                    <li class="nav-item d-none d-md-block d-sm-none">
+                                        <a class="nav-link text-white fw-medium" aria-current="page"> | </a>
+                                    </li>
+        
+                                    <!-- Dropdown menu do usuario -->
+                                    <li class="nav-item dropdown dd-menu" data-bs-theme="dark">
+                                        <a class="nav-link dropdown-toggle  cor-verde" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" ><i class="fa-solid fa-circle-user fs-5 me-3 cor-verde"></i><span id="user-name">Usuário</span></a>
+                                        <ul class="dropdown-menu bg-black">
+                                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Conta</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Configurações</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>             
+                            </div>
+                            <div class="collapse navbar-collapse d-none d-md-flex  barra-search header me-5">
+                                <a href="#" class="cart-link me-4">
+                                    <div class="cart-container">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span class="cart-count">0</span>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="cart-container me-4">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span class="cart-count">0</span>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="cart-container me-4">
+                                        <i class="fa-regular fa-bell"></i>
+                                        <span class="cart-count">0</span>
+                                    </div>
+                                </a>
+
+                                <form class="nav-link border rounded bg-transparente" >
+                                    <div>
+                                        <i class="fas fa-search text-white mx-2"></i>
+                                        <input class="text-white p-2" type="text" placeholder="Buscar...">
+                                    </div>
+                                </form>
+                            </div>  
+
+                        </div>
+
+                    </div>
+                </div>
+            
             </div>
             
-            <div class="collapse navbar-collapse d-none d-md-flex  barra-search header me-5">
-                <a href="#" class="cart-link me-4">
-                    <div class="cart-container">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="cart-container me-4">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="cart-count">0</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="cart-container me-4">
-                        <i class="fa-regular fa-bell"></i>
-                        <span class="cart-count">0</span>
-                    </div>
-                </a>
-    
-                <form class="nav-link border rounded bg-transparente" >
-                    <div>
-                        <i class="fas fa-search text-white mx-2"></i>
-                        <input class="text-white p-2" type="text" placeholder="Buscar...">
-                    </div>
-                </form>
-            </div>
+
             </div>
         </header>
         
@@ -253,6 +328,7 @@
                     </li>
                 </ul>
             </div>
+
             <div class="text-center bg-verde p-1">
                 <p class="text-black fw-medium">Siga-nos nas redes sociais</p>
                 <div class="icon-sociais text-black" aria-label="Links para redes sociais">
@@ -279,8 +355,12 @@
         <!-- Hero -->
             <div class="mx-5">
                 <section class="fw-medium hero-text hero-content ">
-                    <h2 class="mb-5 cor-verde sombra">Bem-vindos á <strong class="sombra">Iara Games</strong>!</h2>
+                    <div>
+                        <h2 class="cor-verde mb-5 ">Bem-vindo <span id="nomeUsuario" class="luckiest-guy-regular sombra"><strong class="fw-1 poppins">à </strong>IARA GAMES</span>!</h2>
+                    </div>
+                    <div class="mb-5 cor-verde sombra"  id="areaUsuario" style="display:none;">...</div>
                     <h1 class="text-start titulo-hero text-white sombra">Explore um Reino de Jogos e <strong class="luckiest-guy-regular">Escolha Sua Próxima Aventura!</strong></h1>
+
 
                     <a type="button" href="#" class="btn btn-lg mt-3 btn-verde fw-medium shadow text-black fw-bold" aria-label="#"><i class="fa-solid fa-play me-3"></i>Clique para começar!</a>
                 </section>
@@ -290,6 +370,7 @@
     </main>
     <!-- fim do Hero -->
 
+    <div id="formularioCadastro"> ... </div>
 
     <!-- Slide de JOGOS -->
     <section class="container spacing">
@@ -483,23 +564,25 @@
 
 
         <!-- sobre nos -->
-        <section class="container bg-black text-black p-3 my-5 p-5 rounded shadow" id="scroll">
+        <section class="container text-black p-3 my-5 p-5 shadow rounded container-sobre-nos sombra" id="scroll">
             <h4 class="text-center text-white letter-spacing fw-bold mb-5 container">Sobre a Iara Games</h4>
         
-            <h2 class="sobre-nos-title text-center fw-semibold mb-3 cor-verde">Valorizando o Talento dos Desenvolvedores Brasileiro</h2>
+            <h2 class="sobre-nos-title text-center fw-semibold mb-3 text-white sombra">Valorizando o Talento dos Desenvolvedores Brasileiro</h2>
         
-            <p class="sobre-nos-p text-center fw-semibold cor-verde ">A Iara Games é um projeto meticuloso e visionário, idealizado para destacar o talento e a criatividade dos desenvolvedores de games brasileiros. Cada detalhe foi cuidadosamente pensado para criar uma plataforma única e personalizada, que reflete a paixão e a determinação de Iara Silva em transformar sua visão em realidade. O nome <strong>IARA GAMES</strong>, além de uma escolha significativa, simboliza a essência do projeto. Inspirado na figura mítica do folclore brasileiro, o nome carrega o compromisso de celebrar a riqueza cultural do Brasil enquanto promove os talentos locais. Descubra um espaço dedicado à inovação, criatividade e à valorização dos desenvolvedores que estão moldando o futuro do mercado de games no Brasil. Seja parte dessa jornada extraordinária!</p>
+            <p class="sobre-nos-p text-center fw-semibold text-white sombra">A Iara Games é um projeto meticuloso e visionário, idealizado para destacar o talento e a criatividade dos desenvolvedores de games brasileiros. Cada detalhe foi cuidadosamente pensado para criar uma plataforma única e personalizada, que reflete a paixão e a determinação de Iara Silva em transformar sua visão em realidade. O nome <strong>IARA GAMES</strong>, além de uma escolha significativa, simboliza a essência do projeto. Inspirado na figura mítica do folclore brasileiro, o nome carrega o compromisso de celebrar a riqueza cultural do Brasil enquanto promove os talentos locais. Descubra um espaço dedicado à inovação, criatividade e à valorização dos desenvolvedores que estão moldando o futuro do mercado de games no Brasil. Seja parte dessa jornada extraordinária!</p>
         </section>
 
-        <section>
-            <a href="#topo">Voltar ao topo</a>
-        </section>
+        <div class="d-flex justify-content-center ">
+
+                <a class="btn-verde  btn mb-5 fs-5 luckiest-guy-regular text-black shadow" href="#topo">Voltar ao topo</a>
+
+        </div>
 
         <!-- footer -->
         <footer class="text-center p-2 cor-verde">
             <div class=" d-md-flex justify-content-center align-items-center gap-5 py-4">
                 <div>
-                    <img class="logo-iaragames-footer" src="./assets/images/Logo04.png" alt="Logo da Iara Games no rodapé" width="150" height="auto">
+                    <img class="logo-iaragames-footer" src="./assets/images/Logo04.png" alt="Logo da Iara Games no rodapé" width="170" height="auto">
                 </div>
                 <div class="pt-3">
                     <p class="cor-verde">Siga-nos nas redes sociais</p>
@@ -531,5 +614,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/cadastro.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>

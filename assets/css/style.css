@@ -49,9 +49,11 @@ body {
 }
 
 hr {
-    border: 1px solid;
-    color: var(--color-10);
+    border: 0,1px solid;
+    color: var(--color-06);
     opacity: 100%;
+    transform: translateY(-20px);
+
 }
 
 /*Variaveis*/
@@ -176,15 +178,19 @@ hr {
     margin: 0 25px;
 }
 
-.barra-search {
-    transform: translatex(50px);
 
-}
 
 /* fonte textos do hero */
 .luckiest-guy-regular {
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    
+}
+.poppins {
+    font-family: "Poppins", cursive;
+    font-weight: 500;
     font-style: normal;
     letter-spacing: 2px;
     
@@ -299,7 +305,6 @@ hr {
 }
 
 
-
 #rede-social {
     font-size: 5vmin;
     transition: 0.5s;
@@ -358,6 +363,10 @@ hr {
 
 .iara-games {
     color: var(--color-02);
+}
+
+.container-sobre-nos {
+background: linear-gradient(172deg,rgba(124, 0, 118, 0.9) 33%, rgb(147, 255, 0.9) 99%);
 }
 
 footer {
