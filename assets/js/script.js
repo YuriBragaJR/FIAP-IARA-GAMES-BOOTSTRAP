@@ -10,4 +10,3 @@
     card.querySelector(".original").textContent = preco.toFixed(2);
     card.querySelector(".final").textContent = precoFinal.toFixed(2);
     });
-

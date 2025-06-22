@@ -12,7 +12,7 @@
     <!-- chamada da fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- chamada do fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -37,7 +37,7 @@
                             <label for="password" class="form-label text-white">Senha</label>
                             <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
                         </div>
-                        <button type="submit" class="btn btn-verde w-100 fw-semibold">Entrar</button>
+                        <button type="submit" class="btn btn-verde w-100 fw-semibold  roboto">Entrar</button>
                     </form>
                     <div class="text-center mt-3">
                         <a href="#" class=" link-azul hover-azul">Esqueceu a senha?</a>
@@ -54,7 +54,7 @@
         <div class="modal-dialog">
             <div class="modal-content p-4 bg-black">
                 <div class="modal-header">
-                    <h5 class="modal-title cor-rosa" id="cadastroModalLabel">Cadastro</h5>
+                    <h5 class="modal-title cor-verde" id="cadastroModalLabel">Cadastro</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
@@ -83,7 +83,7 @@
                             <label for="telefone" class="form-label text-white">Telefone</label>
                             <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
                         </div>
-                        <button type="submit" class="btn btn-rosa text-white w-100 fw-semibold">Cadastrar</button>
+                        <button type="submit" class="btn btn-verde text-black fw-semibold roboto w-100 fw-semibold">Cadastrar</button>
                     </form>
                 </div>
             </div>
@@ -96,7 +96,7 @@
         <div class="modal-dialog">
             <div class="modal-content bg-black text-white p-4">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title cor-azul" id="contatoModalLabel">Contato</h5>
+                    <h5 class="modal-title cor-verde" id="contatoModalLabel">Contato</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
@@ -113,7 +113,7 @@
                             <label for="mensagem" class="form-label">Mensagem</label>
                             <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-azul text-white w-100 fw-semibold">Enviar</button>
+                        <button type="submit" class="btn btn-verde text-black fw-semibold roboto w-100 ">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -149,7 +149,7 @@
 
         <!-- Header -->
         <header class="navbar navbar-expand-md navbar-dark px-3 bg-transparente">
-            <img src="../images/logo01.png" class="img-fluid ms-3"  width="140" height="auto" alt="">
+            <img src="../images/logo01.png" class="img-fluid ms-5 mb-2"  width="140" height="auto" alt="">
 
 
 
@@ -175,7 +175,7 @@
                                         <a class="nav-link fw-medium " aria-current="page" href="../../index.html">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link fw-medium "  aria-current="page" href="#scroll">Quem Somos</a>
+                                        <a class="nav-link fw-medium "  aria-current="page" href="../../index.html#scroll">Quem Somos</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link fw-medium " aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
@@ -230,7 +230,7 @@
                                         <a class="nav-link fw-medium " aria-current="page" href="../../index.html">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link fw-medium "  aria-current="page" href="#scroll">Quem Somos</a>
+                                        <a class="nav-link fw-medium "  aria-current="page" href="#">Quem Somos</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link fw-medium " aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
@@ -242,10 +242,9 @@
                                     <!-- Dropdown menu do usuario -->
                                     <li class="nav-item dropdown dd-menu" data-bs-theme="dark">
                                         <a class="nav-link dropdown-toggle  cor-verde" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" ><i class="fa-solid fa-circle-user fs-5 me-3 cor-verde"></i><span id="user-name">Usuário</span></a>
-                                        <ul class="dropdown-menu bg-black">
+                                        <ul class="dropdown-menu bg-transparente">
                                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Conta</a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Configurações</a></li>
-                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item " href="#"><i class="fa-solid fa-gear me-2"></i>Configurações</a></li><hr class="text-secondary">
                                             <li><a class="dropdown-item" href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
                                         </ul>
                                     </li>
@@ -349,14 +348,11 @@
         <!-- Hero -->
             <div class="mx-5">
                 <section class="fw-medium hero-text hero-content ">
-                    <div>
-                        <h2 class="cor-verde"><span id="nomeUsuario"></span></h2>
-                    </div>
-                    <h2 class="mb-5 cor-verde sombra"  id="areaUsuario" style="display:none;">Bem-vindos á <strong class="sombra">Iara Games</strong>!</h2>
-                    <h1 class="text-start titulo-hero text-white sombra">Explore um Reino de Jogos e <strong class="luckiest-guy-regular">Escolha Sua Próxima Aventura!</strong></h1>
+                    <h2 class="text-start titulo-hero cor-verde mb-4 sombra fs-3">Jogos com até 70% OFF por tempo limitado</h2>
+                    <h3 class="text-start titulo-hero text-white sombra fs-4">É hora de turbinar sua coleção! A IARA GAMES preparou uma seleção especial de títulos com descontos imbatíveis para todos os estilos de jogador: ação, estratégia, aventura, RPG e muito mais.</h3>
 
 
-                    <a type="button" href="#" class="btn btn-lg mt-3 btn-verde fw-medium shadow text-black fw-bold" aria-label="#"><i class="fa-solid fa-play me-3"></i>Clique para começar!</a>
+                    <a type="button" href="#" class="btn btn-lg mt-3 btn-verde fw-medium shadow text-black fw-bold roboto" aria-label="#">Veja ofertas</a>
                 </section>
             </div>
         </div>
@@ -365,51 +361,83 @@
         
         
 <!-- Game Card Section -->
-    <article class="container py-5">
+    <article class="container spacing">
+            <h2 class="cor-rosa fw-bold mb-4 letter-spacing container roboto">Catálogo de Jogos</h2><hr>
 
         <div class="d-lg-flex gap-5">
             <div class="card mb-5 shadow bg-white">
                     <img src="../images/1ChronoTeia/chronochars (2).jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title">ChronoTeia</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">ChronoTeia</h5>
                     <p class="card-text campo-jogo">O tempo é um tecido delicado, uma vasta teia onde cada fio representa uma era, uma vida, uma decisão.</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Genero: RPG</li>
                     <li class="list-group-item">Plataforma: Win, OSX</li>
                 </ul>
-                <div class="card-body text-center">
-                        <a href="#" class="card-link btn btn-rosa text-white fw-medium">Saiba mais</a>
+
+                <div>
+                    <div class="card-body pt-4 d-flex justify-content-between px-5">
+                        <div><p class="fs-4 bg-verde rounded p-1 px-2 text-black roboto">R$ 160,00</p></div>
+                        <div class="d-flex gap-3 p-1">
+                            <div><a href="#" class="fs-4"><i class="fa-regular fa-heart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-shopping-cart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-share-nodes"></i></a></div>
+                        </div>                      
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="card-link btn btn-verde text-black fw-semibold roboto fw-medium">Saiba mais</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card mb-5 shadow bg-white">
                     <img src="../images/2Horizontes-Perdidos/page-img (6).jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Horizontes Perdidos</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">Horizontes Perdidos</h5>
                     <p class="card-text campo-jogo">Você é Amara, uma cartógrafa destemida em um mundo fragmentado por uma antiga catástrofe mágica</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Genero: Aventura</li>
                     <li class="list-group-item">Plataforma: Xbox S/X e PS5</li>
                 </ul>
-                <div class="card-body text-center">
-                        <a href="#" class="card-link btn btn-rosa text-white fw-medium">Saiba mais</a>
+                                <div>
+                    <div class="card-body pt-4 d-flex justify-content-between px-5">
+                        <div><p class="fs-4 bg-verde rounded p-1 px-2 text-black roboto">R$ 160,00</p></div>
+                        <div class="d-flex gap-3 p-1">
+                            <div><a href="#" class="fs-4"><i class="fa-regular fa-heart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-shopping-cart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-share-nodes"></i></a></div>
+                        </div>                      
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="card-link btn btn-verde text-black fw-semibold roboto fw-medium">Saiba mais</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card mb-5 shadow bg-white">
                     <img src="../images/3Ecos-do-Abismo/ecoimg (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Ecos do Abismo</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">Ecos do Abismo</h5>
                     <p class="card-text campo-jogo">No vasto oceano do planeta Terra, os mistérios das profundezas nunca foram completamente revelados.</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Genero: Ação</li>
                     <li class="list-group-item">Plataforma: Win, Xbox S/X</li>
                 </ul>
-                <div class="card-body text-center">
-                        <a href="#" class="card-link btn btn-rosa text-white fw-medium">Saiba mais</a>
+                                <div>
+                    <div class="card-body pt-4 d-flex justify-content-between px-5">
+                        <div><p class="fs-4 bg-verde rounded p-1 px-2 text-black roboto">R$ 160,00</p></div>
+                        <div class="d-flex gap-3 p-1">
+                            <div><a href="#" class="fs-4"><i class="fa-regular fa-heart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-shopping-cart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-share-nodes"></i></a></div>
+                        </div>                      
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="card-link btn btn-verde text-black fw-semibold roboto fw-medium">Saiba mais</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -418,45 +446,75 @@
             <div class="card mb-5 shadow bg-white">
                     <img src="../images/1ChronoTeia/chronochars (2).jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title">ChronoTeia</h5>
+                    <h5 class="card-title fw-bold  cor-rosa ">ChronoTeia</h5>
                     <p class="card-text campo-jogo">O tempo é um tecido delicado, uma vasta teia onde cada fio representa uma era, uma vida, uma decisão.</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Genero: RPG</li>
                     <li class="list-group-item">Plataforma: Win, OSX</li>
                 </ul>
-                <div class="card-body text-center">
-                        <a href="#" class="card-link btn btn-rosa text-white fw-medium">Saiba mais</a>
+                <div>
+                    <div class="card-body pt-4 d-flex justify-content-between px-5">
+                        <div><p class="fs-4 bg-verde rounded p-1 px-2 text-black roboto">R$ 160,00</p></div>
+                        <div class="d-flex gap-3 p-1">
+                            <div><a href="#" class="fs-4"><i class="fa-regular fa-heart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-shopping-cart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-share-nodes"></i></a></div>
+                        </div>                      
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="card-link btn btn-verde text-black fw-semibold roboto fw-medium">Saiba mais</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card mb-5 shadow bg-white">
                     <img src="../images/2Horizontes-Perdidos/page-img (6).jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Horizontes Perdidos</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">Horizontes Perdidos</h5>
                     <p class="card-text campo-jogo">Você é Amara, uma cartógrafa destemida em um mundo fragmentado por uma antiga catástrofe mágica</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Genero: Aventura</li>
                     <li class="list-group-item">Plataforma: Xbox S/X e PS5</li>
                 </ul>
-                <div class="card-body text-center">
-                        <a href="#" class="card-link btn btn-rosa text-white fw-medium">Saiba mais</a>
+                <div>
+                    <div class="card-body pt-4 d-flex justify-content-between px-5">
+                        <div><p class="fs-4 bg-verde rounded p-1 px-2 text-black roboto">R$ 160,00</p></div>
+                        <div class="d-flex gap-3 p-1">
+                            <div><a href="#" class="fs-4"><i class="fa-regular fa-heart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-shopping-cart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-share-nodes"></i></a></div>
+                        </div>                      
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="card-link btn btn-verde text-black fw-semibold roboto fw-medium">Saiba mais</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card mb-5 shadow bg-white">
                     <img src="../images/3Ecos-do-Abismo/ecoimg (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Ecos do Abismo</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">Ecos do Abismo</h5>
                     <p class="card-text campo-jogo">No vasto oceano do planeta Terra, os mistérios das profundezas nunca foram completamente revelados.</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Genero: Ação</li>
                     <li class="list-group-item">Plataforma: Win, Xbox S/X</li>
                 </ul>
-                <div class="card-body text-center">
-                        <a href="#" class="card-link btn btn-rosa text-white fw-medium">Saiba mais</a>
+                <div>
+                    <div class="card-body pt-4 d-flex justify-content-between px-5">
+                        <div><p class="fs-4 bg-verde rounded p-1 px-2 text-black roboto">R$ 160,00</p></div>
+                        <div class="d-flex gap-3 p-1">
+                            <div><a href="#" class="fs-4"><i class="fa-regular fa-heart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-shopping-cart"></i></a></div>
+                            <div><a href="#" class="fs-4"><i class="fa-solid fa-share-nodes"></i></a></div>
+                        </div>                      
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="card-link btn btn-verde text-black fw-semibold roboto fw-medium">Saiba mais</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -466,25 +524,31 @@
 
         <!-- footer -->
         <footer class="text-center p-2 cor-verde">
-            <p>Siga-nos nas redes sociais</p>
-            <div class="icon-sociais" aria-label="Links para redes sociais">
-                <a target="_blank" href="https://x.com/" aria-label="Página oficial do Twitter da Iara Games">
-                    <i class="fa-brands fa-square-x-twitter " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://instagram.com/" aria-label="Página oficial do Instagram da Iara Games">
-                    <i class="fa-brands fa-square-instagram " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://youtube.com/" aria-label="Página oficial do YouTube da Iara Games">
-                    <i class="fa-brands fa-square-youtube " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://facebook.com/" aria-label="Página oficial do YouTube da Iara Games">
-                    <i class="fa-brands fa-square-facebook " id="rede-social"></i></a>
-                
-                <a target="_blank" href="https://linkedin.com/" aria-label="Página oficial do YouTube da Iara Games">
-                    <i class="fa-brands fa-linkedin " id="rede-social"></i></a>
+            <div class=" d-md-flex justify-content-center align-items-center gap-5 py-4">
+                <div>
+                    <img class="logo-iaragames-footer" src="../images/Logo04.png" alt="Logo da Iara Games no rodapé" width="170" height="auto">
+                </div>
+                <div class="pt-3">
+                    <p class="cor-verde">Siga-nos nas redes sociais</p>
+                    <div class="icon-sociais" aria-label="Links para redes sociais">
+                        <a class="hover-verde" target="_blank" href="https://x.com/" aria-label="Página oficial do Twitter da Iara Games">
+                            <i class="fa-brands fa-square-x-twitter " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://instagram.com/" aria-label="Página oficial do Instagram da Iara Games">
+                            <i class="fa-brands fa-square-instagram " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://youtube.com/" aria-label="Página oficial do YouTube da Iara Games">
+                            <i class="fa-brands fa-square-youtube " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://facebook.com/" aria-label="Página oficial do YouTube da Iara Games">
+                            <i class="fa-brands fa-square-facebook " id="rede-social"></i></a>
+                        
+                        <a class="hover-verde" target="_blank" href="https://linkedin.com/" aria-label="Página oficial do YouTube da Iara Games">
+                            <i class="fa-brands fa-linkedin " id="rede-social"></i></a>
+                    </div>
+                </div>
             </div>
-            <img class="logo-iaragames-footer my-3" src="../images/Logo04.png" alt="Logo da Iara Games no rodapé" width="200" height="autp">
-            <p>&copy; 2025 Iara Games. Todos os direitos reservados.</p>
+            <p class=" cor-verde">&copy; 2025 Iara Games. Todos os direitos reservados.</p>
         </footer>
 
     <!-- Bootstrap JS -->

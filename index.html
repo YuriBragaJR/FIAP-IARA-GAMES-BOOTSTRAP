@@ -11,20 +11,13 @@
     <!-- chamada da fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- chamada do fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
-
-
-
-
-
-
-
     <!-- Modal de Login -->
     <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -43,7 +36,7 @@
                             <label for="password" class="form-label text-white">Senha</label>
                             <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
                         </div>
-                        <button type="submit" class="btn btn-verde w-100 fw-semibold">Entrar</button>
+                        <button type="submit" class="btn btn-verde roboto fw-semibold w-100 fw-semibold">Entrar</button>
                     </form>
                     <div class="text-center mt-3">
                         <a href="#" class=" link-azul hover-azul">Esqueceu a senha?</a>
@@ -60,7 +53,7 @@
         <div class="modal-dialog">
             <div class="modal-content p-4 bg-black">
                 <div class="modal-header">
-                    <h5 class="modal-title cor-rosa" id="cadastroModalLabel">Cadastro</h5>
+                    <h5 class="modal-title cor-verde" id="cadastroModalLabel">Cadastro</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
@@ -89,7 +82,7 @@
                             <label for="telefone" class="form-label text-white">Telefone</label>
                             <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
                         </div>
-                        <button type="submit" class="btn btn-rosa text-white w-100 fw-semibold">Cadastrar</button>
+                        <button type="submit" class="btn btn-verde text-black w-100 fw-semibold  roboto">Cadastrar</button>
                     </form>
                 </div>
             </div>
@@ -102,7 +95,7 @@
         <div class="modal-dialog">
             <div class="modal-content bg-black text-white p-4">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title cor-azul" id="contatoModalLabel">Contato</h5>
+                    <h5 class="modal-title cor-verde" id="contatoModalLabel">Contato</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
@@ -119,7 +112,7 @@
                             <label for="mensagem" class="form-label">Mensagem</label>
                             <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-azul text-white w-100 fw-semibold">Enviar</button>
+                        <button type="submit" class="btn btn-verde text-black w-100 fw-semibold  roboto">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -155,7 +148,7 @@
 
         <!-- Header -->
         <header class="navbar navbar-expand-md navbar-dark px-3 bg-transparente">
-            <img src="./assets/images/logo01.png" class="img-fluid ms-3"  width="140" height="auto" alt="">
+            <img src="./assets/images/logo01.png" class="img-fluid ms-5 mb-2"  width="140" height="auto" alt="">
 
 
 
@@ -356,13 +349,14 @@
             <div class="mx-5">
                 <section class="fw-medium hero-text hero-content ">
                     <div>
-                        <h2 class="cor-verde mb-5 ">Bem-vindo <span id="nomeUsuario" class="luckiest-guy-regular sombra"><strong class="fw-1 poppins">à </strong>IARA GAMES</span>!</h2>
+                        <h2 class="cor-verde mb-5 roboto">Bem-vindo <span id="nomeUsuario" class="luckiest-guy-regular sombra"><strong class="fw-1  roboto">à </strong>IARA GAMES</span>!</h2>
                     </div>
-                    <div class="mb-5 cor-verde sombra"  id="areaUsuario" style="display:none;">...</div>
-                    <h1 class="text-start titulo-hero text-white sombra">Explore um Reino de Jogos e <strong class="luckiest-guy-regular">Escolha Sua Próxima Aventura!</strong></h1>
+                    <div id="formularioCadastro"></div>
+                    <div class="mb-5 cor-verde sombra"  id="areaUsuario" style="display:none;"></div>
+                    <h1 class="text-start titulo-hero text-white sombra">Explore um mundo de Jogos e Escolha Sua Próxima <strong class="luckiest-guy-regular">Aventura!</strong></h1>
 
 
-                    <a type="button" href="#" class="btn btn-lg mt-3 btn-verde fw-medium shadow text-black fw-bold" aria-label="#"><i class="fa-solid fa-play me-3"></i>Clique para começar!</a>
+                    <a type="button" href="#" class="btn btn-lg mt-3 btn-verde roboto fw-semibold fw-medium shadow text-black fw-bold roboto" aria-label="#"><i class="fa-solid fa-play me-3"></i>Clique para começar!</a>
                 </section>
             </div>
         </div>
@@ -370,11 +364,11 @@
     </main>
     <!-- fim do Hero -->
 
-    <div id="formularioCadastro"> ... </div>
+
 
     <!-- Slide de JOGOS -->
     <section class="container spacing">
-            <h2 class="container fw-bold mb-4 cor-rosa letter-spacing">Jogos feitos para você!</h2><hr>
+            <h2 class="container fw-bold mb-4 cor-rosa letter-spacing roboto">Jogos feitos para você!</h2><hr>
             <p class="container fs-5 mb-5">Seja você um gamer casual ou um fã hardcore, sempre há novos títulos incríveis esperando para serem explorados.</p>
         <div id="slide-jogos" class="carousel slide">
             <div class="carousel-indicators">
@@ -444,37 +438,37 @@
 
 
 <article class="container mt-4 spacing">
-    <h2 class="cor-rosa fw-bold mb-4 letter-spacing container" id="mais-jogados">Jogos em Destaque</h2><hr>
+    <h2 class="cor-rosa fw-bold mb-4 letter-spacing container roboto" id="mais-jogados">Jogos em Destaque</h2><hr>
     <p class="fs-5 mb-5 container">Na Iara Games, garantimos horas de diversão e muita emoção.</p>
     <p class="linha-subtextos mb-5"></p>
         <div class="row gap-5 justify-content-center">
 
             <div class="col-md-4 col-lg-3 col-sm-6 col-12">
-                <div class="card text-center  card-jogo shadow">
+                <div class="card text-center ">
                     <a href="#"><img src="./assets/images/1ChronoTeia/chronochars (2).jpg" class="card-img-top" alt="Imagem"></a>
                     <div class="card-body">
-                    <h5 class="card-title fw-bold text-black">ChronoTeia: GLT</h5>
-                    <a href="#" class="btn btn-azul text-light fw-semibold">Saiba mais</a>
+                    <h5 class="card-title fw-bold  cor-rosa">ChronoTeia: GLT</h5>
+                    <a href="#" class="btn btn-verde roboto fw-semibold text-black  fw-semibold">Saiba mais</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 col-lg-3 col-sm-6 col-12">
-                <div class="card text-center  card-jogo shadow">
+                <div class="card text-center  card-jogo">
                     <a href="#"><img src="./assets/images/2Horizontes-Perdidos/page-img (6).jpg" class="card-img-top" alt="Imagem"></a>
                     <div class="card-body">
-                    <h5 class="card-title fw-bold text-black">Horizontes Perdidos</h5>
-                    <a href="#" class="btn btn-azul text-light fw-semibold">Saiba mais</a>
+                    <h5 class="card-title fw-bold  cor-rosa">Horizontes Perdidos</h5>
+                    <a href="#" class="btn btn-verde roboto fw-semibold text-black  fw-semibold">Saiba mais</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 col-lg-3 col-sm-6 col-12">
-                <div class="card text-center  card-jogo shadow">
+                <div class="card text-center  card-jogo">
                     <a href="#"><img src="./assets/images/3Ecos-do-Abismo/ecoimg (1).jpg" class="card-img-top" alt="Imagem"></a>
                     <div class="card-body">
-                    <h5 class="card-title fw-bold text-black">Ecos do Abismo</h5>
-                    <a href="#" class="btn btn-azul text-light fw-semibold">Saiba mais</a>
+                    <h5 class="card-title fw-bold  cor-rosa">Ecos do Abismo</h5>
+                    <a href="#" class="btn btn-verde roboto fw-semibold text-black fw-semibold">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -483,24 +477,24 @@
 </article>
 
 <article class="container mt-4 spacing">
-    <h2 class="cor-rosa fw-bold mb-4 letter-spacing container" id="mais-jogados">Jogos em Promoção</h2><hr>
+    <h2 class="cor-rosa fw-bold mb-4 letter-spacing container roboto">Jogos em Promoção</h2><hr>
     <p class="fs-5 mb-5 container"> Nossa promoção especial de jogos está imperdível, aproveite descontos incríveis por tempo limitado. Garanta já o seu favorito antes que acabe!</p>
     <p class="linha-subtextos mb-5"></p>
         <div class="row gap-5 justify-content-center">
 
             <div class="col-md-4 col-lg-3 col-sm-6 col-12">
-                <div class="card  card-jogo shadow bg-light">
+                <div class="card  card-jogo bg-light">
                     <a href="#"><img src="./assets/images/4Lendas-de-Estrelarium/lendaschar.jpg" class="card-img-top" alt="Imagem"></a>
                     <div class="card-body">
-                    <h5 class="card-title fw-bold text-black">ChronoTeia: GLT</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">Lendas Estrelarium</h5>
                     <div class="d-flex align-items-center gap-4 justify-content-center">
                         <div class="disconto">
-                        <article class="p-2 fs-5 text-white">-60%</article>
+                        <article class="p-2 fs-5 text-black fw-semidold fw-semibold">-60%</article>
                         </div>
                     <div>
                         <div class="pt-3 cartao" data-preco="160" data-desconto="60">
                             <p class="preco-original valor-antigo p-0 m-0">R$ <span class="original"></span></p>
-                            <p class="preco-final valor-novo fs-4">R$ <span class="final"></span></p>
+                            <p class="preco-final valor-novo fs-4 text-black">R$ <span class="final"></span></p>
                         </div>
                     </div>
                     <div class="">
@@ -512,18 +506,18 @@
             </div>
 
             <div class="col-md-4 col-lg-3 col-sm-6 col-12">
-                <div class="card  card-jogo shadow bg-light">
+                <div class="card  card-jogo bg-light">
                     <a href="#"><img src="./assets/images/5Sonhos-de-neon/neonchars.jpg" class="card-img-top" alt="Imagem"></a>
                     <div class="card-body">
-                    <h5 class="card-title fw-bold text-black">Sonhos de Néon</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">Sonhos de Néon</h5>
                     <div class="d-flex align-items-center gap-4 justify-content-center">
                         <div class="disconto">
-                        <article class="p-2 fs-5 text-white">-55%</article>
+                        <article class="p-2 fs-5 text-black fw-semidold fw-semibold">-55%</article>
                         </div>
                     <div>
                         <div class="pt-3 cartao" data-preco="250" data-desconto="55">
                             <p class="preco-original valor-antigo p-0 m-0">R$ <span class="original"></span></p>
-                            <p class="preco-final valor-novo fs-4">R$ <span class="final"></span></p>
+                            <p class="preco-final valor-novo fs-4 text-black">R$ <span class="final"></span></p>
                         </div>
                     </div>
                     <div class="">
@@ -535,18 +529,18 @@
             </div>
 
             <div class="col-md-4 col-lg-3 col-sm-6 col-12">
-                <div class="card  card-jogo shadow bg-light">
+                <div class="card  card-jogo bg-light">
                     <a href="#"><img src="./assets/images/6Reino-sob-as-Cinzas/page-img (1).jpg" class="card-img-top" alt="Imagem"></a>
                     <div class="card-body">
-                    <h5 class="card-title fw-bold text-black">Reino sob as Cinzas</h5>
+                    <h5 class="card-title fw-bold  cor-rosa">Reino em Cinzas</h5>
                     <div class="d-flex align-items-center gap-4 justify-content-center">
                         <div class="disconto">
-                        <article class="p-2 fs-5 text-white">-30%</article>
+                        <article class="p-2 fs-5 text-black fw-semibold">-30%</article>
                         </div>
                     <div>
                         <div class="pt-3 cartao" data-preco="100" data-desconto="30">
                             <p class="preco-original valor-antigo p-0 m-0">R$ <span class="original"></span></p>
-                            <p class="preco-final valor-novo fs-4">R$ <span class="final"></span></p>
+                            <p class="preco-final valor-novo fs-4 text-black">R$ <span class="final"></span></p>
                         </div>
                     </div>
                     <div class="">
@@ -564,17 +558,17 @@
 
 
         <!-- sobre nos -->
-        <section class="container text-black p-3 my-5 p-5 shadow rounded container-sobre-nos sombra" id="scroll">
-            <h4 class="text-center text-white letter-spacing fw-bold mb-5 container">Sobre a Iara Games</h4>
+        <section class="container text-black p-3 my-5 p-5 shadow rounded container-sobre-nos bg-light" id="scroll">
+            <h4 class="text-center text-black letter-spacing fw-bold mb-5 container roboto fs-3">Sobre a Iara Games</h4><hr class="cor-verde">
         
-            <h2 class="sobre-nos-title text-center fw-semibold mb-3 text-white sombra">Valorizando o Talento dos Desenvolvedores Brasileiro</h2>
+            <h2 class="sobre-nos-title text-center fw-semibold mb-3 text-black">Valorizando o Talento dos Desenvolvedores Brasileiro</h2>
         
-            <p class="sobre-nos-p text-center fw-semibold text-white sombra">A Iara Games é um projeto meticuloso e visionário, idealizado para destacar o talento e a criatividade dos desenvolvedores de games brasileiros. Cada detalhe foi cuidadosamente pensado para criar uma plataforma única e personalizada, que reflete a paixão e a determinação de Iara Silva em transformar sua visão em realidade. O nome <strong>IARA GAMES</strong>, além de uma escolha significativa, simboliza a essência do projeto. Inspirado na figura mítica do folclore brasileiro, o nome carrega o compromisso de celebrar a riqueza cultural do Brasil enquanto promove os talentos locais. Descubra um espaço dedicado à inovação, criatividade e à valorização dos desenvolvedores que estão moldando o futuro do mercado de games no Brasil. Seja parte dessa jornada extraordinária!</p>
+            <p class="sobre-nos-p text-center fw-semibold text-black bg">A Iara Games é um projeto meticuloso e visionário, idealizado para destacar o talento e a criatividade dos desenvolvedores de games brasileiros. Cada detalhe foi cuidadosamente pensado para criar uma plataforma única e personalizada, que reflete a paixão e a determinação de Iara Silva em transformar sua visão em realidade. O nome <strong>IARA GAMES</strong>, além de uma escolha significativa, simboliza a essência do projeto. Inspirado na figura mítica do folclore brasileiro, o nome carrega o compromisso de celebrar a riqueza cultural do Brasil enquanto promove os talentos locais. Descubra um espaço dedicado à inovação, criatividade e à valorização dos desenvolvedores que estão moldando o futuro do mercado de games no Brasil. Seja parte dessa jornada extraordinária!</p>
         </section>
 
         <div class="d-flex justify-content-center ">
 
-                <a class="btn-verde  btn mb-5 fs-5 luckiest-guy-regular text-black shadow" href="#topo">Voltar ao topo</a>
+                <a class="btn-verde roboto fw-semibold  btn mb-5 fs-5  roboto text-black shadow" href="#topo">Voltar ao topo</a>
 
         </div>
 

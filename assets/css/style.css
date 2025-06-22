@@ -23,7 +23,7 @@ a {
 }
 
 p {
-    color: #000000;
+    color: #424242;
 }
 
 /* Garantindo que botões e inputs tenham um estilo mais uniforme */
@@ -46,6 +46,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--color-11);
 }
 
 hr {
@@ -68,6 +69,7 @@ hr {
     --color-08: #006eff;
     --color-09: #003985;
     --color-10: #020020ab;
+    --color-11: #e6e4fd;
     --transition: .5s;
 }
 
@@ -133,9 +135,13 @@ hr {
 .cor-rosa {
     color: var(--color-06);
 }
+.cor-rosa-e {
+    color: var(--color-07);
+}
 .cor-azul {
     color: var(--color-08);
 }
+
 
 /* bg - pré-codificado com paleta de seleção propria */
 .bg-verde {
@@ -173,6 +179,14 @@ hr {
     margin: 220px auto;
 }
 
+.card {
+    box-shadow: 0 5px 30px #3c324456;
+    transition: var(--transition);
+}
+.card:hover {
+    box-shadow: 0 15px 15px #34114d56;
+    transition: var(--transition);
+}
 
 .header {
     margin: 0 25px;
@@ -194,6 +208,11 @@ hr {
     font-style: normal;
     letter-spacing: 2px;
     
+}
+.roboto  {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /* Menu Hamburger */
@@ -279,7 +298,7 @@ hr {
 /* corpo do site */
 .hero-bg {
     background-color: var(--color-001);
-    background: linear-gradient(rgba(3, 27, 54, 0.9), rgba(255, 7, 110, 0.336)), url('../images/iara-bg.png');
+    background: linear-gradient(rgba(141, 8, 97, 0.9), rgba(23, 3, 94, 0.616)), url('../images/iara-bg.png');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -287,7 +306,7 @@ hr {
 /* corpo da pagina lista de jogos */
 .lista-bg {
     background-color: var(--color-001);
-    background: linear-gradient(rgba(3, 27, 54, 0.9), rgba(255, 255, 255, 0.562)), url('../images/bg-herov4.png');
+    background: linear-gradient(rgba(3, 27, 54, 0.9), rgba(255, 255, 255, 0.562)), url('../images/bg-herov5.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -335,7 +354,7 @@ hr {
 }
 
 .disconto {
-    background-color: var(--color-08);
+    background-color: var(--color-04);
     border-radius: 5px;
 
 
@@ -363,10 +382,6 @@ hr {
 
 .iara-games {
     color: var(--color-02);
-}
-
-.container-sobre-nos {
-background: linear-gradient(172deg,rgba(124, 0, 118, 0.9) 33%, rgb(147, 255, 0.9) 99%);
 }
 
 footer {
